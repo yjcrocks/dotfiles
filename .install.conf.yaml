@@ -8,6 +8,7 @@
      ~/.antigen: zsh/antigen/
      ~/.zsh: zsh/
      ~/.zshrc: zshrc
+     ~/.tmux.conf: tmux.conf
 
  - shell:
      - git submodule update --init --recursive
@@ -16,3 +17,4 @@
      # Zsh setup
      - sudo apt-get update && sudo apt-get install zsh
      - sudo chsh -s /bin/zsh
+     - source .zshrc
