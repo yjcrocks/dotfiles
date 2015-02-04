@@ -7,6 +7,6 @@
 [submodule "vim/bundle/seoul256.vim"]
 	path = vim/bundle/seoul256.vim
 	url = https://github.com/junegunn/seoul256.vim
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "zsh/antigen"]
+	path = zsh/antigen
+	url = https://github.com/zsh-users/antigen.git
