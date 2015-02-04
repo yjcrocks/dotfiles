@@ -34,3 +34,7 @@
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+    ignore = dirty
+[submodule ".gitignore-boilerplates"]
+	path = .gitignore-boilerplates
+	url = https://github.com/github/gitignore.git
