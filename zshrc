@@ -14,3 +14,7 @@ antigen theme steeef
 
 # Tell antigen that you're done.
 antigen apply
+
+# Source other files
+source .zsh/alias.zsh
+source .zsh/path.zsh
