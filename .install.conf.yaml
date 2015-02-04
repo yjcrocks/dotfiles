@@ -1,10 +1,15 @@
- - clean: []
+ - clean: ['~']
 
  - link:
      ~/.dotfiles: ''
      ~/.vim: vim/
      ~/.vimrc: vimrc
+     ~/.oh-my-zsh: oh-my-zsh/
+     ~/.oh-my-zsh/custom: zsh/
+     ~/.zshrc: zshrc
 
  - shell:
      - git submodule update --init --recursive
      - vim +PluginInstall +qall
+     - sudo apt-get update && sudo apt-get install zsh
+     - chsh -s /bin/zsh
