@@ -18,5 +18,5 @@
      - echo "Compile YouCompleteMe if needed"
      # Zsh setup
      - echo "Make sure that you've installed zsh"
-     - sudo chsh -s /bin/zsh
+     - sudo chsh -s /bin/zsh `whoami`
      - source ~/.zshrc
