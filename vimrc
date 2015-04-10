@@ -85,6 +85,7 @@ set showmatch
 set autoindent
 filetype indent on
 set lazyredraw
+set mouse=a
 
 " airline settings
 set guifont=Powerline_Consolas:h14:cANSI
@@ -175,9 +176,9 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 "       CtrlP        "
 """"""""""""""""""""""
 " CtrlP settings
-"let g:ctrlp_match_window = 'bottom,order:ttb'
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 
