@@ -82,6 +82,7 @@ set showcmd
 set cursorline
 set wildmenu
 set showmatch
+set autoread
 set autoindent
 filetype indent on
 set lazyredraw
@@ -99,8 +100,19 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " ColorColumn settings
 " colorcolumn=80
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%>79v.\+/
+let s:highlightOverLength = 1
+highlight OverLengthHi ctermbg=red ctermfg=white guibg=#592929
+highlight link OverLength OverLengthHi
+match OverLength /\%>80v.\+/
+fun! ToggleOverLengthMatching()
+    if s:highlightOverLength
+        highlight link OverLength NONE
+        let s:highlightOverLength = 0
+    else
+        highlight link OverLength OverLengthHi
+        let s:highlightOverLength = 1
+    endif
+endfun
 
 " NerdCommenter settings
 let NERDSpaceDelims=1
@@ -113,10 +125,6 @@ let NERDSpaceDelims=1
 """"""""""""""""""""""
 set incsearch
 set hlsearch
-
-" turn off search highlight
-nnoremap <leader>. :nohlsearch<CR>
-
 
 
 " }}}
@@ -162,6 +170,12 @@ let mapleader=","
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+" toggle overlength highlights
+map <leader>hh :call ToggleOverLengthMatching()<CR>
+
+" turn off search highlight
+nnoremap <leader>, :nohlsearch<CR>
+
 " save session (open it with vim -S)
 "nnoremap <leader>s :mksession<CR>
 
@@ -176,9 +190,9 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 "       CtrlP        "
 """"""""""""""""""""""
 " CtrlP settings
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_match_window = 'bottom,order:ttb'
+" let g:ctrlp_switch_buffer = 0
+" let g:ctrlp_working_path_mode = 0
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 
