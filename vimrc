@@ -100,9 +100,9 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 " ColorColumn settings
 " colorcolumn=80
-let s:highlightOverLength = 1
+let s:highlightOverLength = 0
 highlight OverLengthHi ctermbg=red ctermfg=white guibg=#592929
-highlight link OverLength OverLengthHi
+highlight link OverLength NONE
 match OverLength /\%>80v.\+/
 fun! ToggleOverLengthMatching()
     if s:highlightOverLength
