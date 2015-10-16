@@ -85,8 +85,10 @@ set lazyredraw
 set mouse=a
 
 " airline settings
-set guifont=Powerline_Consolas:h14:cANSI
-let g:airline_powerline_fonts=1
+" set guifont=Powerline_Consolas:h14:cANSI
+let g:airline_powerline_fonts=0
+let g:airline_left_sep=""
+let g:airline_right_sep=""
 set laststatus=2
 
 " ColorColumn settings
