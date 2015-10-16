@@ -12,7 +12,7 @@
 
  - shell:
      # - sudo apt-get update -y && sudo apt-get upgrade -y
-     - git submodule update --init --recursive
+     - git submodule update --remote --merge --init
      # Vim setup
      - vim +PluginInstall +qall
      # Zsh setup
