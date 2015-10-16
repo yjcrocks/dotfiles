@@ -9,3 +9,4 @@ Session.vim
 # Local *.zsh
 zsh/local/
 vim/bundle/
+!vim/bundle/Vundle.vim
