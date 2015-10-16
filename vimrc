@@ -19,12 +19,9 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'molokai'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'bling/vim-airline'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Solarized'
-Plugin 'django.vim'
 Plugin 'scrooloose/nerdcommenter'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
@@ -52,10 +49,9 @@ filetype plugin indent on    " required
 """"""""""""""""""""""
 "       Colors       "
 """"""""""""""""""""""
-" Installed: molokai seoul256 solarized
 syntax enable
 set background=dark
-colorscheme seoul256 "molokai
+colorscheme seoul256
 
 
 
@@ -92,15 +88,6 @@ set mouse=a
 set guifont=Powerline_Consolas:h14:cANSI
 let g:airline_powerline_fonts=1
 set laststatus=2
-
-" YouCompleteMe settings
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_autoclose_preview_window_after_insertion=1
-" set g:ycm_add_preview_to_completeopt=0
-" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-" let g:ycm_show_diagnostics_ui=0
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=1
 
 " ColorColumn settings
 " colorcolumn=80

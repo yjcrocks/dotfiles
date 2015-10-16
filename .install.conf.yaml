@@ -11,11 +11,10 @@
      ~/.tmux.conf: tmux.conf
 
  - shell:
-     - sudo apt-get update -y && sudo apt-get upgrade -y
+     # - sudo apt-get update -y && sudo apt-get upgrade -y
      - git submodule update --init --recursive
      # Vim setup
      - vim +PluginInstall +qall
-     - echo "Compile YouCompleteMe if needed"
      # Zsh setup
      - echo "Make sure that you've installed zsh"
      - sudo chsh -s /bin/zsh `whoami`
