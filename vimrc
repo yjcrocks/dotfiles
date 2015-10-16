@@ -23,6 +23,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Solarized'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ervandew/supertab.git'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
