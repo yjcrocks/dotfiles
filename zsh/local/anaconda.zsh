@@ -13,5 +13,3 @@ function anaconda_toggle(){
         print "Anaconda activated"
     fi
 }
-
-alias anaconda='anaconda_toggle'
