@@ -24,6 +24,8 @@ Plugin 'bling/vim-airline'
 Plugin 'Solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab.git'
+Plugin 'fatih/vim-go'
+Plugin 'majutsushi/tagbar'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
@@ -84,6 +86,7 @@ set autoindent
 filetype indent on
 set lazyredraw
 set mouse=a
+set scrolloff=3
 
 " airline settings
 " set guifont=Powerline_Consolas:h14:cANSI
@@ -120,6 +123,8 @@ let NERDSpaceDelims=1
 set incsearch
 set hlsearch
 
+" Tagbar settings
+nmap <F8> :TagbarToggle<CR>
 
 " }}}
 " Folding -------------------------------- {{{
