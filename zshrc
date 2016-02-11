@@ -28,3 +28,11 @@ if [ -d $HOME/.zsh/local ]; then
     source $file
   done
 fi
+
+# access to online help
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
+# activate zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
