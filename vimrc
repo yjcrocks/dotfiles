@@ -87,6 +87,7 @@ filetype indent on
 set lazyredraw
 set mouse=a
 set scrolloff=3
+set clipboard=unnamed
 
 " airline settings
 " set guifont=Powerline_Consolas:h14:cANSI
