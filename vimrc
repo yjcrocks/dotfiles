@@ -26,6 +26,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab.git'
 Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
