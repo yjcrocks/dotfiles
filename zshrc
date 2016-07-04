@@ -33,7 +33,7 @@ if [ -d $HOME/.zsh/local ]; then
 fi
 
 # access to online help
-unalias run-help
+# unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
