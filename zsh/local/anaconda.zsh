@@ -1,4 +1,6 @@
 export ANACONDA_PATH="$HOME/anaconda/bin"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 function have_anaconda(){
     [[ -n $path[(r)$ANACONDA_PATH] ]]

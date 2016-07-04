@@ -27,6 +27,8 @@ Plugin 'ervandew/supertab.git'
 Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ctrlp.vim'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
@@ -191,10 +193,10 @@ nnoremap <leader>, :nohlsearch<CR>
 "       CtrlP        "
 """"""""""""""""""""""
 " CtrlP settings
-" let g:ctrlp_match_window = 'bottom,order:ttb'
-" let g:ctrlp_switch_buffer = 0
-" let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 
 

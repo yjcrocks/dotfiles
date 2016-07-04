@@ -6,11 +6,14 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 
-# Syntax highlighting bundle.
-# antigen bundle zsh-users/zsh-syntax-highlighting
-
 # Load the theme.
 antigen theme steeef
+
+# Install other zsh plugins.
+antigen bundle bobthecow/git-flow-completion
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
 antigen apply
