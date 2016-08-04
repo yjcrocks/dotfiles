@@ -229,7 +229,7 @@ set modeline
 let g:autopep8_max_line_length=119
 
 " autopairs configs
-let g:AutoPairsFlyMode = 1
+"let g:AutoPairsFlyMode = 1
 
 " }}}
 " vim:foldmethod=marker:foldlevel=0
