@@ -3,6 +3,7 @@
 	email = caspian0207@gmail.com
 [core]
 	editor = vim
+	autocrlf = input
 [merge]
 	tool = vimdiff
 [color]
