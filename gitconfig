@@ -3,6 +3,8 @@
 	email = caspian0207@gmail.com
 [core]
 	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore
 [merge]
 	tool = vimdiff
 [color]
