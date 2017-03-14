@@ -12,8 +12,7 @@
      ~/.tmux.conf: tmux.conf
 
  - shell:
-     # - sudo apt-get update -y && sudo apt-get upgrade -y
-     - git submodule update --remote --merge --init
+     - git submodule update --init
      # Vim setup
      - vim +PluginInstall +qall
      # Zsh setup
