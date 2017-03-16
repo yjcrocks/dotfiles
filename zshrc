@@ -38,3 +38,5 @@ HELPDIR=/usr/local/share/zsh/help
 
 # activate zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/completions $fpath)
+fpath=(~/.zsh/completion $fpath)
