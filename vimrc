@@ -19,7 +19,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'Solarized'
+Plugin 'dracula/vim'
+Plugin 'joshdick/onedark.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab.git'
 Plugin 'majutsushi/tagbar'
@@ -56,7 +57,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 
 
