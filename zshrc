@@ -10,9 +10,8 @@ antigen bundle git
 antigen theme steeef
 
 # Install other zsh plugins.
-antigen bundle bobthecow/git-flow-completion
-
-# Syntax highlighting bundle.
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
