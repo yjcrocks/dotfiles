@@ -1,6 +1,7 @@
 [user]
 	name = Youngjae Chang
 	email = caspian0207@gmail.com
+	signingkey = F74C088A5A44A2B6
 [core]
 	editor = vim
 	autocrlf = input
@@ -18,3 +19,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[commit]
+	gpgsign = true
