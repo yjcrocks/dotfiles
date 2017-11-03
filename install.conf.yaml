@@ -17,9 +17,3 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    # Vim setup
-    - vim +PluginInstall +qall
-    # Zsh setup
-    - echo "Make sure that you've installed zsh"
-    - sudo chsh -s /bin/zsh `whoami`
-    - source ~/.zshrc
