@@ -18,13 +18,10 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'junegunn/seoul256.vim'
 Plugin 'bling/vim-airline'
 Plugin 'Solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab.git'
-Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
@@ -59,7 +56,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme seoul256
+colorscheme solarized
 
 
 
