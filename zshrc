@@ -19,6 +19,10 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Tell antigen that you're done.
 antigen apply
 
+# Prepare for zsh-/bash-completions
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
 # Load custom files
 # Load all files in .zsh directory
 if [ -d $HOME/.zsh ]; then
