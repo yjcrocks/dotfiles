@@ -17,19 +17,19 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'dracula/vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab.git'
-Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'editorconfig/editorconfig-vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlp.vim'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ervandew/supertab.git'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
 " HERE HERE HERE HERE HERE
@@ -58,7 +58,7 @@ filetype plugin indent on    " required
 """"""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme onedark
+colorscheme solarized
 
 
 
@@ -95,9 +95,14 @@ set clipboard=unnamed
 
 " airline settings
 " set guifont=Powerline_Consolas:h14:cANSI
-let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_left_sep=""
+let g:airline_powerline_fonts=0
 let g:airline_right_sep=""
+let g:airline_solarized_bg='dark'
+let g:airline_theme="solarized"
 set laststatus=2
 
 " ColorColumn settings
@@ -105,7 +110,7 @@ set laststatus=2
 let s:highlightOverLength = 0
 highlight OverLengthHi ctermbg=red ctermfg=white guibg=#592929
 highlight link OverLength NONE
-match OverLength /\%>80v.\+/
+match OverLength /\%>88v.\+/
 fun! ToggleOverLengthMatching()
     if s:highlightOverLength
         highlight link OverLength NONE
