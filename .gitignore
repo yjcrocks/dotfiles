@@ -6,7 +6,10 @@ Session.vim
 .netrwhist
 *~
 
+# vim-plug
+vim/plugged/*
+vim/autoload/plug.vim
+
 # Local *.zsh
 zsh/local/
-vim/bundle/*
-!vim/bundle/Vundle.vim
+

@@ -1,55 +1,32 @@
-" Vundle --------------------------------- {{{
-""""""""""""""""""""""
-"       Vundle       "
-""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Plugin --------------------------------- {{{
+""""""""""""""""""""""""
+"       vim-plug       "
+""""""""""""""""""""""""
+" Link: https://github.com/junegunn/vim-plug
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ctrlp.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab.git'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" HERE HERE HERE HERE HERE
-" HERE HERE HERE HERE HERE
-" HERE HERE HERE HERE HERE
-" HERE HERE HERE HERE HERE
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'kien/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'jiangmiao/auto-pairs'
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tell-k/vim-autopep8'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/seoul256.vim'
+call plug#end()
 
 " }}}
 " Colors --------------------------------- {{{
@@ -60,8 +37,7 @@ syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-
-
+colorscheme seoul256
 
 " }}}
 " Spaces & Tabs -------------------------- {{{
