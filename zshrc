@@ -20,9 +20,19 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Tell antigen that you're done.
 antigen apply
 
-# Prepare for zsh-/bash-completions
+# Prepare for bash-completions
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
+
+# Prepare for PURE prompt
+PURE_PROMPT_SYMBOL='$'
+PURE_GIT_DOWN_ARROW='↓'
+PURE_GIT_UP_ARROW='↑'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+
+# Fix MobaXterm Home/End key with zsh
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[4~' end-of-line
 
 # Load custom files
 # Load all files in .zsh directory
