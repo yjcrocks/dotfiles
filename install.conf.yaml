@@ -5,16 +5,23 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.vim: vim/
     ~/.vimrc: vimrc
-    ~/.antigen: zsh/antigen/
     ~/.zsh: zsh/
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.zlogin: zlogin
+    ~/.zimrc: zimrc
     ~/.tmux.conf: tmux.conf
+
+- create:
+    - ~/.zim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [curl -fsSL -o ~/.zim/zimfw.zsh "https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh", Downloading zimfw.zsh file]
+    - [zsh ~/.zim/zimfw.zsh install, Installing modules from ~/.zimrc]
+
 
