@@ -4,6 +4,5 @@ alias cls=clear
 alias tmux='tmux -2'
 alias tma='tmux attach -t'
 
-# python
-alias mkvv='python3 -m venv venv'
-alias vv='source venv/bin/activate'
+# python (w/ uv)
+alias vv='source .venv/bin/activate'

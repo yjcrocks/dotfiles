@@ -154,3 +154,5 @@ if [ -d $HOME/.zsh/local ]; then
   done
 fi
 
+# Add ~/.local/bin to $PATH (uv)
+export PATH="$HOME/.local/bin:$PATH"
