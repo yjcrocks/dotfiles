@@ -14,13 +14,13 @@ endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/tagbar'
+Plug 'preservim/nerdcommenter'
 Plug 'tell-k/vim-autopep8'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -187,7 +187,13 @@ nnoremap <leader>, :nohlsearch<CR>
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+else
+  let g:ctrlp_clear_cache_on_exit = 0
+endif
 
 
 
