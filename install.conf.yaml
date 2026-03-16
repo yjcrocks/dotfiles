@@ -24,7 +24,8 @@
     - [curl -fsSL -o ~/.zim/zimfw.zsh "https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh", Downloading zimfw.zsh file]
     - [zsh ~/.zim/zimfw.zsh install, Installing modules from ~/.zimrc]
     - [command -v uv || curl -LsSf https://astral.sh/uv/install.sh | sh, Installing uv python package manager]
-    - command: command -v atuin || curl -LsSf https://setup.atuin.sh | sh
+    - [command -v sgpt || uv tool install shell-gpt, Installing shell-gpt command-line LLM access tool]
+    - command: command -v atuin > /dev/null || curl -LsSf https://setup.atuin.sh | sh
       description: Installing atuin shell history synchronizer
       stdin: true
       stdout: true
