@@ -1,0 +1,12 @@
+# chezmoi configuration for dotfile management
+# This repository is used as the chezmoi source state.
+# Run `chezmoi init --apply /path/to/repo` or simply `./install` after bootstrap.
+
+# Use the current repository as the source state.
+[source]
+# The source directory is the repository root by default.
+# destDir = "~"  # default destination directory for managed dotfiles
+
+[template]
+# Use strict template rendering for safer dotfile generation.
+strict = true

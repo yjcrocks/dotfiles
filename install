@@ -1,15 +1,32 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
-CONFIG="install.conf.yaml"
-DOTBOT_DIR="dotbot"
-
-DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cd "${BASEDIR}"
-git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+install_script() {
+  if command -v curl >/dev/null 2>&1; then
+    curl -fsSL "$1" | sh
+  else
+    echo "Error: curl is required to install $2." >&2
+    exit 1
+  fi
+}
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+if ! command -v chezmoi >/dev/null 2>&1; then
+  echo "Installing chezmoi..."
+  install_script https://chezmoi.io/get chezmoi
+fi
+
+if ! command -v mise >/dev/null 2>&1; then
+  echo "Installing mise..."
+  install_script https://mise.run mise
+fi
+
+if command -v chezmoi >/dev/null 2>&1; then
+  echo "Applying chezmoi configuration from ${BASEDIR}..."
+  chezmoi init --source "${BASEDIR}" --apply || true
+else
+  echo "chezmoi was not installed correctly." >&2
+  exit 1
+fi
