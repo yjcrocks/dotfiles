@@ -1,0 +1,12 @@
+[tools]
+eza = "latest"
+ripgrep = "latest"
+bat = "latest"
+zoxide = "latest"
+uv = "latest"
+python = "latest"
+aichat = "latest"
+
+[settings]
+pipx.uvx = true
+python.uv_venv_auto = "create|source"
