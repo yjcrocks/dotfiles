@@ -142,9 +142,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Load custom files
 #
 
-# Add ~/.local/bin to $PATH (uv & mise)
-export PATH="$HOME/.local/bin:$PATH"
-
 # Load all files in .zsh directory
 if [ -d $HOME/.zsh ]; then
   for file in $HOME/.zsh/*.zsh(N); do
