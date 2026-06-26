@@ -95,6 +95,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #PURE_PROMPT_SYMBOL='$'
 #PURE_GIT_DOWN_ARROW='↓'
 #PURE_GIT_UP_ARROW='↑'
+PURE_GIT_PULL=0
 
 
 # ------------------
@@ -141,18 +142,20 @@ bindkey -M vicmd 'j' history-substring-search-down
 # Load custom files
 #
 
+# Add ~/.local/bin to $PATH (uv & mise)
+export PATH="$HOME/.local/bin:$PATH"
+
 # Load all files in .zsh directory
 if [ -d $HOME/.zsh ]; then
-  for file in $HOME/.zsh/*.zsh; do
-    source $file
-  done
-fi
-# Load all files in .zsh/local directory
-if [ -d $HOME/.zsh/local ]; then
-  for file in $HOME/.zsh/local/*.zsh; do
+  for file in $HOME/.zsh/*.zsh(N); do
     source $file
   done
 fi
 
-# Add ~/.local/bin to $PATH (uv)
-export PATH="$HOME/.local/bin:$PATH"
+# Load all files in .zsh/local directory
+if [ -d $HOME/.zsh/local ]; then
+  for file in $HOME/.zsh/local/*.zsh(N); do
+    source $file
+  done
+fi
+
