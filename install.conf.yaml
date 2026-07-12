@@ -15,6 +15,9 @@
     ~/.zlogin: zlogin
     ~/.zimrc: zimrc
     ~/.tmux.conf: tmux.conf
+    ~/.config/mise/config.toml:
+        create: true
+        path: mise/config.toml
 
 - create:
     - ~/.zim

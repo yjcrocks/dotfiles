@@ -1,0 +1,7 @@
+[tools]
+aichat = "latest"
+codex = "latest"
+jq = "latest"
+node = "latest"
+ripgrep = "latest"
+shellcheck = "latest"
