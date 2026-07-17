@@ -6,10 +6,11 @@
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
 skip_global_compinit=1
 
-# Add ~/.local/bin to $PATH (uv & mise)
-export PATH="$HOME/.local/bin:$PATH"
+# Add ~/.local/bin to $PATH (uv & mise), without duplicate entries
+typeset -U path PATH
+path=("$HOME/.local/bin" $path)
 
-# Load all files in .zsh directory
+# Load environment files in numeric filename order
 if [ -d $HOME/.zsh/env ]; then
   for file in $HOME/.zsh/env/*.zsh(N); do
     source $file

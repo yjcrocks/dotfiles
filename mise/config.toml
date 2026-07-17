@@ -1,7 +1,9 @@
 [tools]
 aichat = "latest"
+bat = "latest"
 codex = "latest"
 jq = "latest"
 node = "latest"
 ripgrep = "latest"
 shellcheck = "latest"
+zoxide = "latest"
