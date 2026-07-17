@@ -1,9 +1,11 @@
 [tools]
 aichat = "latest"
+atuin = "latest"
 bat = "latest"
 codex = "latest"
 jq = "latest"
 node = "latest"
 ripgrep = "latest"
 shellcheck = "latest"
+uv = "latest"
 zoxide = "latest"

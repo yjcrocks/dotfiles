@@ -6,7 +6,7 @@
 : ${ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim}
 skip_global_compinit=1
 
-# Add ~/.local/bin to $PATH (uv & mise), without duplicate entries
+# Add the mise bootstrap location to $PATH, without duplicate entries
 typeset -U path PATH
 path=("$HOME/.local/bin" $path)
 
